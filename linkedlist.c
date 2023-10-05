@@ -223,6 +223,24 @@ int DeleteNode(struct Node * p, int pos)
 }
 
 
+bool isSorted(struct Node *p)
+{
+    int x = 0;
+    while (p != NULL)
+    {
+        if (p->data < x)
+        {
+            return false;
+        }
+        else {
+            x = p->data;
+            p = p->next;
+        }
+    }
+    
+    return true;
+    
+}
 
 
 int main(int argc, const char * argv[]) {
